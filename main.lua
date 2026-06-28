@@ -1960,7 +1960,6 @@ Close.MouseButton1Click:Connect(function()
 	gui:Destroy()
 end)
 
-=
 -- MAIN LOOP ANIMATION
 RS.Heartbeat:Connect(function(dt)
 	frameCount = frameCount + 1
@@ -1974,12 +1973,7 @@ RS.Heartbeat:Connect(function(dt)
 	local root = char and char:FindFirstChild("HumanoidRootPart")
 	if not char or not root then return end
 	
-	-- AAA Animation Controller
 	AnimationController:update(char, root, dt)
 	
 	if colorTick > 1.2 then colorTick = 0 end
 end)
-
-print("🦇 Dragon Wings AAA Bat Animation System v3.0 loaded!")
-print("Animation: 4-Phase Keyframe Curves | Dynamic Skeleton | 6-DOF Shoulder")
-print("States: Idle, Perch, Hover, TakeOff, FlyForward, FlyFast, Ascend, Descend, Glide, Dive, Landing, Brake, TurnLeft, TurnRight")
